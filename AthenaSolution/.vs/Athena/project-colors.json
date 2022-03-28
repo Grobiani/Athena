@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b633eca7-a2d5-167e-8b90-2ad277d19dce": {
+      "ProjectGuid": "b633eca7-a2d5-167e-8b90-2ad277d19dce",
+      "DisplayName": "Athena",
+      "ColorIndex": 0
+    },
+    "f4c124e3-60a1-a37e-69b9-2e55d5170ae0": {
+      "ProjectGuid": "f4c124e3-60a1-a37e-69b9-2e55d5170ae0",
+      "DisplayName": "Sandbox",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
