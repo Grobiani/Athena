@@ -1,0 +1,3 @@
+[submodule "AthenaSolution/Athena/libs/glfw"]
+	path = AthenaSolution/Athena/libs/glfw
+	url = https://github.com/glfw/glfw.git
