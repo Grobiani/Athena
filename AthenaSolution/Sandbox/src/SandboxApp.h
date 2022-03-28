@@ -2,7 +2,7 @@
 
 #include "Core/Application.h"
 
-class SandboxApp : public Application
+class SandboxApp : public Athena::Application
 {
 };
 

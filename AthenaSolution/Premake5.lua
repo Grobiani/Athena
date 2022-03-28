@@ -7,23 +7,29 @@ startproject "Sandbox"
 
 group "Libs"
 
+include "Athena/libs/glfw"
+
 group ""
 
-lib_includes = ""
+lib_includes = {"Athena/libs/glfw/include"}
 
 project "Athena"
     kind "StaticLib"
     location "Athena"
     staticruntime "on"
 
-    files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.c" }
+    files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
     bindirs ""
 
     includedirs {
 
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        lib_includes[1]
+    }
 
+    links {
+        "glfw"
     }
 
     filter "configurations:Debug"
@@ -46,12 +52,13 @@ project "Sandbox"
     staticruntime "on"
     location "Sandbox"
 
-    files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.c" }
+    files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
     includedirs {
 
         "%{prj.name}/src",
-        "Athena/src"
+        "Athena/src",
+        lib_includes[1]
 
     }
 

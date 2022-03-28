@@ -1,11 +1,25 @@
 #pragma once
 
-class Application
-{
+namespace Athena {
 
-public:
+	class Application
+	{
 
-	void Run();
+	private:
 
-};
+		static Application s_Application;
+
+		class Window* m_MainWindow;
+
+	public:
+
+		void Run();
+
+		static Application& GetApplication() {
+			return s_Application;
+		}
+
+	};
+
+}
 

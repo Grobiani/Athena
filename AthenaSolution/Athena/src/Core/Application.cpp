@@ -2,9 +2,15 @@
 
 #include <iostream>
 
-void Application::Run()
+#include "GLFW/glfw3.h"
+
+#include "Window.h"
+
+void Athena::Application::Run()
 {
 
-	std::cout << "Test";
+	m_MainWindow = new Window();
+	
+	m_MainWindow->Init("TestWindow");
 
 }
