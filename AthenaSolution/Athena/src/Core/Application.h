@@ -13,6 +13,10 @@ namespace Athena {
 
 	public:
 
+		Application() = default;
+
+		virtual ~Application();
+
 		void Run();
 
 		static Application& GetApplication() {

@@ -8,10 +8,11 @@ startproject "Sandbox"
 group "Libs"
 
 include "Athena/libs/glfw"
+include "Athena/libs/glad"
 
 group ""
 
-lib_includes = {"Athena/libs/glfw/include"}
+lib_includes = {"Athena/libs/glfw/include", "Athena/libs/glad/include"}
 
 project "Athena"
     kind "StaticLib"
@@ -25,11 +26,14 @@ project "Athena"
     includedirs {
 
         "%{prj.name}/src",
-        lib_includes[1]
+        lib_includes[1],
+        lib_includes[2]
     }
 
     links {
-        "glfw"
+        "glfw",
+        "glad",
+        "opengl32.lib"
     }
 
     filter "configurations:Debug"
